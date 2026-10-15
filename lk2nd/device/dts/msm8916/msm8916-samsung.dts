@@ -726,6 +726,28 @@
 		};
 	};
 
+	grandmaxltekx {
+		model = "Samsung Galaxy Grand Max (SM-G720N0)";
+		compatible = "samsung,grandmaxltekx", "samsung,grandmax";
+		lk2nd,match-bootloader = "G720N0*";
+
+		lk2nd,dtb-files = "msm8916-samsung-grandmax";
+
+		/*
+		 * The stock kernel of the Korean variant ships DTBs for both
+		 * board revision 4 (Rev00) and 5 (Rev01).
+		 */
+		qcom,msm-id = <QCOM_ID_MSM8916 0>;
+		qcom,board-id = <0xCE08FF01 4>, <0xCE08FF01 5>;
+
+		muic-reset {
+			compatible = "samsung,muic-reset";
+			i2c-reg = <0x14>;
+			i2c-sda-gpios = <&tlmm 105 I2C_GPIO_FLAGS>;
+			i2c-scl-gpios = <&tlmm 106 I2C_GPIO_FLAGS>;
+		};
+	};
+
 	/* rev 5 */
 
 	j3lte-chnctc {
