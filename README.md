@@ -1,6 +1,12 @@
 ![An image of multiple devices showing lk2nd menu](Documentation/.assets/header.jpg)
 
 # lk2nd
+
+> [!NOTE]
+> 이 포크에는 **갤럭시 그랜드 맥스 한국판 (SM-G720N0)** 지원이 추가되어 있습니다.
+> 미리 빌드한 이미지와 한국어 설치 가이드는
+> [prebuilt/samsung-grandmaxltekx](prebuilt/samsung-grandmaxltekx/README.md)에 있습니다.
+
 lk2nd is a custom bootloader for many different devices based on Qualcomm
 system-on-chips (SoCs), including smartphones, tablets, smartwatches and a few
 single board computers (SBCs). It simplifies booting standard operating systems
