@@ -23,8 +23,11 @@ jobs:
       - name: Install additional build dependencies
         run: sudo apt-get install -yqq device-tree-compiler
         if: inputs.project == 'lk2nd'
+      # Use the distribution toolchain: the "latest" release downloaded by
+      # carlosperate/arm-none-eabi-gcc-action fails its checksum verification
       - name: Install cross compiler
-        uses: carlosperate/arm-none-eabi-gcc-action@v1
+        run: sudo apt-get update -qq &&
+             sudo apt-get install -yqq gcc-arm-none-eabi libnewlib-arm-none-eabi
       - run: arm-none-eabi-gcc --version
       - uses: actions/checkout@v7
       - name: Build
